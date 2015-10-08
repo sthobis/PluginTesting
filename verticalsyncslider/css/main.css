@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+html {
+  font-size: 62.5%;
+}
+body p {
+  font-size: 1.4rem;
+  color: #454545;
+}
+body div[role="main"] .hero-slider-container {
+  overflow: hidden;
+  width: 800px;
+  height: 600px;
+  margin: 100px auto;
+  position: relative;
+}
+body div[role="main"] .hero-slider-container .hero-slider-texts {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: #111111;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+body div[role="main"] .hero-slider-container .hero-slider-texts #hero-slider-prev {
+  height: 20px;
+  width: 100%;
+}
+body div[role="main"] .hero-slider-container .hero-slider-texts #hero-slider-next {
+  height: 20px;
+  width: 100%;
+}
+body div[role="main"] .hero-slider-container .hero-slider-texts .hero-slider-text {
+  height: 600px;
+}
+body div[role="main"] .hero-slider-container .hero-slider-texts .hero-slider-text p {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 800;
+}
+body div[role="main"] .hero-slider-container .hero-slider-backgrounds .hero-slider-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 600px;
+}
+body div[role="main"] .hero-slider-container .hero-slider-backgrounds .hero-slider-background img {
+  opacity: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background: #111111;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail {
+  padding: 7px 15px;
+  overflow: hidden;
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail:first-of-type {
+  padding-top: 15px;
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail:last-of-type {
+  padding-bottom: 15px;
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail:focus,
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail:active {
+  outline: none;
+}
+body div[role="main"] .hero-slider-container .hero-slider-thumbnails img {
+  width: 120px;
+  height: 100%;
+}

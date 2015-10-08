@@ -1,0 +1,146 @@
+// ===== Responsive Styles ===========================================================================
+// Author: Stefanus Thobi Sinaga (stefanus@xtremax.com)
+// 2015
+// Info: Main styling for ProjectX (desktop-first approach)
+// ===================================================================================================
+
+// import bootstrap variables, grid and mixins
+@import "../js/vendor/bootstrap/less/mixins.less";
+@import "fonts.less";
+
+// basic variables
+@themecolor: #f13940;
+@bodyfontcolor: #454545;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+
+	// heading 1 style
+	h1 {
+
+	}
+
+	// heading 2 style
+	h2 {
+		
+	}
+
+	// heading 3 style
+	h3 {
+		
+	}
+
+	// heading 4 style
+	h4 {
+		
+	}
+
+	// heading 5 style
+	h5 {
+		
+	}
+
+	// paragraph style
+	p {
+		font-size: 1.4rem;
+		color: @bodyfontcolor;
+	}
+
+	// global link style
+	a {
+
+	}
+
+	div[role="main"] {
+
+		.hero-slider-container {
+			overflow: hidden;
+			width: 800px;
+			height: 600px;
+			margin: 100px auto;
+			position: relative;
+
+			.hero-slider-texts {
+				position: absolute;
+				z-index: 2;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 250px;
+				background: #111111;
+				background-color: rgba(10,10,10,0.6);
+
+				#hero-slider-prev {
+					height: 20px;
+					width: 100%;
+				}
+
+				#hero-slider-next {
+					height: 20px;
+					width: 100%;
+				}
+
+				.hero-slider-text {
+					height: 600px;
+
+					p {
+						font-size: 20px;
+						color: #ffffff;
+						font-weight: 800;
+					}
+				}
+			}
+
+			.hero-slider-backgrounds {
+
+				.hero-slider-background {
+					background-position: center;
+					background-repeat: no-repeat;
+					width: 800px;
+					height: 600px;
+
+					img {
+						opacity: 0;
+						max-width: 100%;
+						max-height: 100%;
+					}
+				}
+			}
+
+			.hero-slider-thumbnails {
+				position: absolute;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 150px;
+				background: #111111;
+				background-color: rgba(10,10,10,0.6);
+
+				.hero-slider-thumbnail {
+					padding: 7px 15px;
+					overflow: hidden;
+
+					&:first-of-type {
+						padding-top: 15px;
+					}
+
+					&:last-of-type {
+						padding-bottom: 15px;
+					}
+
+					&:focus, &:active {
+						outline: none;
+					}
+				}
+
+				img {
+					width: 120px;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

@@ -13,7 +13,10 @@ body div[role="main"] .hero-slider-container {
   margin: 100px auto;
   position: relative;
 }
-body div[role="main"] .hero-slider-container .hero-slider-texts {
+body div[role="main"] .hero-slider-container.active .hero-slider-thumbnails {
+  right: 0px;
+}
+body div[role="main"] .hero-slider-container .hero-slider-contents {
   position: absolute;
   z-index: 2;
   left: 0;
@@ -23,21 +26,44 @@ body div[role="main"] .hero-slider-container .hero-slider-texts {
   background: #111111;
   background-color: rgba(10, 10, 10, 0.6);
 }
-body div[role="main"] .hero-slider-container .hero-slider-texts #hero-slider-prev {
-  height: 20px;
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-prev {
+  height: 40px;
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: gold;
 }
-body div[role="main"] .hero-slider-container .hero-slider-texts #hero-slider-next {
-  height: 20px;
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-prev:focus,
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-prev:active {
+  cursor: pointer;
+}
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-next {
+  height: 40px;
   width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: gold;
 }
-body div[role="main"] .hero-slider-container .hero-slider-texts .hero-slider-text {
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-next:focus,
+body div[role="main"] .hero-slider-container .hero-slider-contents #hero-slider-next:active {
+  cursor: pointer;
+}
+body div[role="main"] .hero-slider-container .hero-slider-contents .hero-slider-content {
   height: 600px;
+  padding: 40px 15px;
+  display: none;
 }
-body div[role="main"] .hero-slider-container .hero-slider-texts .hero-slider-text p {
+body div[role="main"] .hero-slider-container .hero-slider-contents .hero-slider-content#slide-content-0 {
+  display: block;
+}
+body div[role="main"] .hero-slider-container .hero-slider-contents .hero-slider-content h1 {
+  color: #ffffff;
+}
+body div[role="main"] .hero-slider-container .hero-slider-contents .hero-slider-content p {
   font-size: 20px;
   color: #ffffff;
-  font-weight: 800;
 }
 body div[role="main"] .hero-slider-container .hero-slider-backgrounds .hero-slider-background {
   background-position: center;
@@ -52,12 +78,13 @@ body div[role="main"] .hero-slider-container .hero-slider-backgrounds .hero-slid
 }
 body div[role="main"] .hero-slider-container .hero-slider-thumbnails {
   position: absolute;
-  right: 0;
+  right: -150px;
   top: 0;
   bottom: 0;
   width: 150px;
   background: #111111;
   background-color: rgba(10, 10, 10, 0.6);
+  transition: right ease .5s;
 }
 body div[role="main"] .hero-slider-container .hero-slider-thumbnails .hero-slider-thumbnail {
   padding: 7px 15px;

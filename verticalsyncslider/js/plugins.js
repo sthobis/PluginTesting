@@ -45,6 +45,31 @@ MyNamespace.UIInteraction = function( customSetting ) {
 				centerMode: false,
 				vertical: true
 			});
+
+			// On before slide change
+			$('.hero-slider-backgrounds').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				var current = '#slide-content-' + currentSlide;
+				var next = '#slide-content-' + nextSlide;
+				$(current).fadeToggle();
+				$(next).fadeToggle();
+			});
+
+			$('#hero-slider-prev').on('click', function() {
+				$('.hero-slider-backgrounds').slick('slickPrev');
+			});
+
+			$('#hero-slider-next').on('click', function() {
+				$('.hero-slider-backgrounds').slick('slickNext');
+			});
+
+			$('.hero-slider-container').hover(
+				function () {
+					$(this).toggleClass('active');
+				},
+				function () {
+					$(this).toggleClass('active');
+				}
+			);
 		}
 	}
 }
